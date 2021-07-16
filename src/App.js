@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -10,33 +9,25 @@ import TableRow from '@material-ui/core/TableRow';
 function App() {
   return (
     <div className="App">
-      <div style={{ width: 587, border: "1px solid gray", borderRadius: 16, margin: 15 }}>
+      <div>
         <TableContainer>
-          <Table size="small" aria-label="a dense table">
+          <Table size="small" aria-label="a dense table" className="table">
             <TableHead>
               <TableRow>
                 <TableCell></TableCell>
-                <TableCell align="right" style={{
-                  textAlign: "center", backgroundColor: "gray",
-                  borderBottomLeftRadius: 15,
-                  borderTopRightRadius: 15
-                }}>Deposit size</TableCell>
+                <TableCell className="depositHeader" align="center">Deposit size</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               <TableRow>
-                <TableCell style={{ border: "none", paddingRight: 0, width: 226, paddingLeft: 0, paddingBottom: 0 }} component="th" scope="row">
-                  <TableCell component="th" scope="row" style={{
-                    textAlign: "center", backgroundColor: "gray",
-                    borderTopRightRadius: 15,
-                    borderBottomLeftRadius: 16
-                  }}>
+                <TableCell className="leftBlock" component="th" scope="row">
+                  <TableCell className="bonusBlock">
                     Bonus size
                   </TableCell>
                   <TableCell style={{ paddingRight: 0 }} component="th" scope="row">
-                    <TableBody>
+                    <TableBody className="mouthsColumn">
                       <TableRow>
-                        <TableCell style={{ height: 12 }}>
+                        <TableCell style={{ height: 24 }}>
                         </TableCell>
                       </TableRow>
 
@@ -58,15 +49,15 @@ function App() {
                     </TableBody>
                   </TableCell>
                 </TableCell>
-
+                <Table size="small" aria-label="a dense table">
                 <TableHead>
                   <TableRow>
-                    <TableCell className="headerTable" >1,000 INDA</TableCell>
-                    <TableCell className="headerTable" align="right">10,000 INDA</TableCell>
-                    <TableCell className="headerTable" align="right">100,000 INDA</TableCell>
+                    <TableCell className="headerTable">1,000 INDA</TableCell>
+                    <TableCell className="headerTable">10,000 INDA</TableCell>
+                    <TableCell className="headerTable">100,000 INDA</TableCell>
                   </TableRow>
                 </TableHead>
-                <TableBody>
+                <TableBody className="percentBody">
                   <TableRow>
                     <TableCell className="cellTable">
                       20%+
@@ -101,6 +92,7 @@ function App() {
                     </TableCell>
                   </TableRow>
                 </TableBody>
+                </Table>
               </TableRow>
             </TableBody>
           </Table>
